@@ -1,9 +1,14 @@
 pipeline {
     agent any
     stages {
-        stage('Hello') {
+        stage('Install Dependencies') {
             steps {
-                echo 'Hello World from GitHub!'
+                bat 'npm install'  // Use 'bat' for Windows, 'sh' for Linux
+            }
+        }
+        stage('Run Tests') {
+            steps {
+                bat 'npm test'
             }
         }
     }

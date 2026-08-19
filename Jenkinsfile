@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Install Dependencies') {
             steps {
-                bat 'npm install'  // Use 'bat' for Windows, 'sh' for Linux
+                bat 'npm install'
             }
         }
         stage('Run Tests') {
